@@ -6,5 +6,5 @@ cp -f ../../java-app/target/*.jar ./
 echo "****************************"
 echo "** Building Docker Image ***"
 echo "****************************"
-
-cd /home/jenkins/jenkins-data/dockerpipeline/jenkins/build && docker-compose -f docker-compose-build.yml build --no-cache
+WORKSPACE=/home/jenkins/jenkins-data/jenkins_home/workspace/pipeline-docker-mvn
+cd $WORKSPACE/jenkins/build && docker-compose -f docker-compose-build.yml build --no-cache
