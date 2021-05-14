@@ -1,6 +1,9 @@
 pipeline {
 
     agent any
+    environment{
+        PASS= credentials('DockerHuBPass')
+    }
 
     stages {
 
